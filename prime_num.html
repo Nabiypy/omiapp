@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta http-equiv="Content-type" content="text/html; 
+      charset=utf-8"> 
+    <meta name="viewport" id="viewport" 
+      content="width=device-width, height=device-height, 
+      initial-scale=1.0, maximum-scale=1.0, 
+      user-scalable=no;"/> 
+    
+    <link rel="shortcut icon" href="images/pres.jpg" media="All"/>
+    <link rel="stylesheet" href="scripts/css/jquery.mobile-1.4.0.min.css"/>
+    <link rel="stylesheet" href="scripts/css/jquery.mobile.icons-1.4.0.min.css" type="text/css"/>
+    <link rel="stylesheet" href="scripts/css/jquery.mobile.structure-1.4.0.min.css">
+    <link rel="stylesheet" href="scripts/css/truncate.css"/>
+    
+    <script src="scripts/js/jquery-2.0.3.js"></script>
+    <script src="scripts/js/jquery.mobile-1.4.0.min.js">      
+    <script type="text/javascript" charset="utf-8" 
+      src="cordova.js">
+      
+       
+			</script>    
+     <script>
+      //A FUNCTION TO CALC THE nth PRIME NUMBER 
+	    function calcPrimeNumber(){
+	var start = new Date().getTime();	
+			var cnt=0; i=2; z=0;
+			
+  var endNum = document.numbers.input.value;
+  do { 
+  	for(var j=1; j<=i; j++)
+  	{
+  		if(i%j==0)
+  			cnt++;
+  	}
+	
+	if(cnt==2)
+	{
+		z++;
+		document.write(i+ " ");
+	}
+	cnt=0;
+	i++;
+  }while (z<endNum);
+  // DISPLAY THE CONTENT OF THE NTH PRIME NUMBER
+  document.write("<br>" + "The " + endNum + "th prime number is " + (i-1));
+  var end = new Date().getTime();
+var time = end - start;
+document.write("<br>the time taken in millisecond is " +   time); 
+	alert("The "+ endNum +" th prime number is: " +(i-1) + "\n and the time taken is "+ time+" milliseconds");
+                }
+							
+        </script>
+    </head>
+    <body>
+			  <div id="main-page">
+					<div data-role=header data-theme="b">
+								<a data-rel="back" data-direction="reverse" href="mainPage" data-icon="back">Back</a>
+								<a href="#" id="refresh" data-icon="refresh" class="ui-btn-right" data-position="right">Refresh</a>
+								    <h1>Prime Count</h1>
+								  </div>
+					
+					<div data-role="content">
+		        <form name="numbers">
+
+		             Enter Number: <input type="text" name="input" /> 
+		            <input type="button" value="The nth prime number" onclick="calcPrimeNumber()" />
+		        </form>
+					</div>
+	        
+					</div>
+        <!-- reload page on device ready -->
+     <script src="scripts/js/reloadpage.js"></script>
+    </body>
+</html>

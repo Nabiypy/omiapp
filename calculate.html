@@ -1,0 +1,77 @@
+<!Doctype html> 
+<html>
+<head> 
+<meta http-equiv="Content-type" content="text/html; 
+      charset=utf-8"> 
+    <meta name="viewport" id="viewport" 
+      content="width=device-width, height=device-height, 
+      initial-scale=1.0, maximum-scale=1.0, 
+      user-scalable=no;"/> 
+    
+    <link rel="shortcut icon" href="images/pres.jpg" media="All"/>
+    <link rel="stylesheet" href="scripts/css/jquery.mobile-1.4.0.min.css"/>
+    <link rel="stylesheet" href="scripts/css/jquery.mobile.icons-1.4.0.min.css" type="text/css"/>
+    <link rel="stylesheet" href="scripts/css/jquery.mobile.structure-1.4.0.min.css">
+    <link rel="stylesheet" href="scripts/css/truncate.css"/>
+    
+    <script src="scripts/js/jquery-2.0.3.js"></script>
+    <script src="scripts/js/jquery.mobile-1.4.0.min.js">      
+    <script type="text/javascript" charset="utf-8" 
+      src="cordova.js"></script>    
+    
+</head> 
+
+
+<body> 
+
+<div data-role=page id="home">
+
+  <div data-role=header data-theme="b">
+<a data-rel="back" data-direction="reverse" href="mainPage" data-icon="back">Back</a>
+    <h1>Guess Answer</h1>
+
+  </div>
+
+
+  <div data-role=content>
+<h2 style="text-align:center">You must be CORRECT...!</h2>
+<h3 style="text-align:center">2 + 2 =..6..</h3>
+		<script type="text/javascript">
+		var startTime = (new Date()).getTime();
+		
+		// var answer = prompt("You! What is the value of 2 + 2?", "");
+// 		if (answer == "4")
+// 		  alert("You must be a genius or something.");
+// 		else if (answer == "3" || answer == "5")
+// 		  alert("Almost!");
+// 		else
+// 		  alert("You're an embarrassment.");
+			
+//Using loop
+var answer;
+while (true) {
+  answer = prompt("You! What is the value of 2 + 2 (2) ?", "");
+  if (answer == "6") {
+    alert("You must be a genius or something.");
+    break;
+  }
+  else if (answer == "4" || answer == "8") {
+    alert("Almost!");
+  }
+  else {
+    alert("You're an embarrassment.");
+  }
+}
+			var endtime = (new Date()).getTime();
+			var totalTime = endtime - startTime;
+			alert(totalTime + ' milliseconds');
+		  //document.write("<br>the time taken in millisecond is " +   totalTime);
+		</script>
+
+  </div>
+
+</div>
+     
+</body>
+
+</html> 

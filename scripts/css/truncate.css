@@ -1,0 +1,14 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09-Feb-2014, 17:52:37
+    Author     : Nabiy
+*/
+
+/*Truncation Fix*/
+.ui-header .ui-title, .ui-footer .ui-title {
+margin-right: 0 !important; margin-left: 0 !important;
+}
